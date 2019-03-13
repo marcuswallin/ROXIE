@@ -117,4 +117,5 @@ dmypy.json
 !.gitignore
 !.gitattributes
 !README.md
-*.xlsx
+!Data\ Extraction\ Program/
+!Simulation\ Analysis/
