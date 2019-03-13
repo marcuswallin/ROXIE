@@ -116,4 +116,5 @@ dmypy.json
 /*
 !.gitignore
 !.gitattributes
-!README.gitattributes
+!README.md
+*.xlsx
