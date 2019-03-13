@@ -1,0 +1,722 @@
+                                                  
+         RRRRRRRRRRR    OOOOOOOOO XX      XXXX   IIII   EEEEEEEE
+          RRR   RRR    OOO   OOO  XXX   XXXX    IIII   EEEE     
+         RRR   RRR    OOO   OOO    XXX XXX     IIII   EEEE      
+        RRRRRRRRR    OOO   OOO      XXXXX     IIII   EEEEEEE    
+       RRR RRR      OOO   OOO     XXXXXX     IIII   EEEE        
+      RRR   RRR    OOO   OOO    XXXX  XXX   IIII   EEEE         
+     RRR     RRR  OOOOOOOOO   XXXX     XXX IIII   EEEEEEEEE 10.2
+
+
+                   Routine for the Optimization of              
+                         magnet X - sections,                   
+                    Inverse field calculation and               
+                           coil End design                      
+
+                      VERS.10, UPDATE 3.2, 2018                 
+
+                    (C) BY STEPHAN RUSSENSCHUCK                 
+                   AND BERNHARD AUCHMANN, TE-MSC                
+
+                 CERN, 1211 GENEVA 23, SWITZERLAND              
+                        TEL: +41 22 76 79032                    
+                   MAIL: susana.izquierdo.bermudez@cern.ch      
+                ROXIE HOME PAGE: http://cern.ch/roxie           
+
+     DATE ...............................................   13. 2.2019
+     TIME ...............................................        16.19
+
+
+     COMMENT: DS-Dipole, FNAL Cable (40x0.70), no core, 56 Turns, 6 Blocks                    
+
+     NUMBER OF BLOCKS ...................................           18
+     NUMBER OF CONDUCTORS ...............................          168
+     NUMBER OF STRANDS ..................................         6720
+     NUMBER OF CUTS IN Z DIRECTION ......................           21
+     HIGHEST ORDER OF MULTIPOLES ........................           20
+
+
+     *****************    1-ST FUNCTION EVALUATION   *****************
+
+
+     NUMBER OF BLOCK ....................................            1
+     WITHIN BLOCK GROUP .................................            1
+     NUMBER OF CONDUCTORS ...............................            9
+     POSITIONING ANGLE (DEG) ............................       0.2290
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     CABLE HEIGHT (MM).(INSULATED) ......................      15.0019
+     CABLE INNER WIDTH (MM).(INSULATED) .................       1.3964
+     CABLE OUTER WIDTH (MM).(INSULATED) .................       1.6076
+     CABLE HEIGHT (MM).(BARE) ...........................      14.8025
+     CABLE INNER WIDTH (MM).(BARE) ......................       1.1984
+     CABLE OUTER WIDTH (MM).(BARE) ......................       1.4068
+     RADIAL INSULATION THICKNESS (MM)....................       0.0997
+     AZIMUTHAL INSULATION THICKNESS (MM).................       0.0997
+     NUMBER OF STRANDS ..................................           40
+     DIAMETER OF STRANDS (MM)............................       0.7000
+     CU/SC RATIO ........................................       1.1060
+     RESIDUAL RESISTIVITY RATIO..........................     100.0000
+     TEMPERATURE AT WHICH JC AND DJC ARE GIVEN (K) ......       4.2000
+     LINEAR APPROXIMATION JC(15.0 T) (A/MM**2)...........     1274.000
+     LINEAR APPROXIMATION DJC/DB (A/MM**2 T).............      301.000
+     CABLING ANGLE (DEG) ................................        1.438
+     NUMBER OF DISCRETISATION POINTS AZIMUTHAL ..........            2
+     NUMBER OF DISCRETISATION POINTS RADIAL .............           20
+     CONDUCTOR NAME .....................................    11T_P101K
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            2
+     WITHIN BLOCK GROUP .................................            1
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................            8
+     POSITIONING ANGLE (DEG) ............................      26.5021
+     INCLINATION ANGLE (DEG) ............................      28.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            3
+     WITHIN BLOCK GROUP .................................            1
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................            3
+     POSITIONING ANGLE (DEG) ............................      55.7611
+     INCLINATION ANGLE (DEG) ............................      59.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            4
+     WITHIN BLOCK GROUP .................................            1
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................            2
+     POSITIONING ANGLE (DEG) ............................      70.3836
+     INCLINATION ANGLE (DEG) ............................      70.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            5
+     WITHIN BLOCK GROUP .................................            2
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................           16
+     POSITIONING ANGLE (DEG) ............................       0.1500
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.4133
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            6
+     WITHIN BLOCK GROUP .................................            2
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................           18
+     POSITIONING ANGLE (DEG) ............................      30.1226
+     INCLINATION ANGLE (DEG) ............................      33.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.4133
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            7
+     WITHIN BLOCK GROUP .................................            3
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................            9
+     POSITIONING ANGLE (DEG) ............................       0.2290
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      30.1593
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            8
+     WITHIN BLOCK GROUP .................................            3
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................            8
+     POSITIONING ANGLE (DEG) ............................      26.5021
+     INCLINATION ANGLE (DEG) ............................      28.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      30.1593
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................            9
+     WITHIN BLOCK GROUP .................................            3
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................            3
+     POSITIONING ANGLE (DEG) ............................      55.7611
+     INCLINATION ANGLE (DEG) ............................      59.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      30.1593
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................           10
+     WITHIN BLOCK GROUP .................................            3
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................            2
+     POSITIONING ANGLE (DEG) ............................      70.3836
+     INCLINATION ANGLE (DEG) ............................      70.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      30.1593
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................           11
+     WITHIN BLOCK GROUP .................................            4
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................           16
+     POSITIONING ANGLE (DEG) ............................       0.1500
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.6626
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................           12
+     WITHIN BLOCK GROUP .................................            4
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................            1
+     NUMBER OF CONDUCTORS ...............................           18
+     POSITIONING ANGLE (DEG) ............................      30.1226
+     INCLINATION ANGLE (DEG) ............................      33.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........   12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.6626
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................       0.0000
+
+     NUMBER OF BLOCK ....................................           13
+     WITHIN BLOCK GROUP .................................            3
+     NUMBER OF CONDUCTORS ...............................            9
+     POSITIONING ANGLE (DEG) ............................       0.2290
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     CABLE HEIGHT (MM).(INSULATED) ......................      15.0019
+     CABLE INNER WIDTH (MM).(INSULATED) .................       1.3964
+     CABLE OUTER WIDTH (MM).(INSULATED) .................       1.6076
+     CABLE HEIGHT (MM).(BARE) ...........................      14.8025
+     CABLE INNER WIDTH (MM).(BARE) ......................       1.1984
+     CABLE OUTER WIDTH (MM).(BARE) ......................       1.4068
+     RADIAL INSULATION THICKNESS (MM)....................       0.0997
+     AZIMUTHAL INSULATION THICKNESS (MM).................       0.0997
+     NUMBER OF STRANDS ..................................           40
+     DIAMETER OF STRANDS (MM)............................       0.7000
+     CU/SC RATIO ........................................       1.1060
+     RESIDUAL RESISTIVITY RATIO..........................     100.0000
+     TEMPERATURE AT WHICH JC AND DJC ARE GIVEN (K) ......       4.2000
+     LINEAR APPROXIMATION JC(15.0 T) (A/MM**2)...........     1274.000
+     LINEAR APPROXIMATION DJC/DB (A/MM**2 T).............      301.000
+     CABLING ANGLE (DEG) ................................        1.438
+     NUMBER OF DISCRETISATION POINTS AZIMUTHAL ..........            2
+     NUMBER OF DISCRETISATION POINTS RADIAL .............           20
+     CONDUCTOR NAME .....................................    11T_P101K
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           14
+     WITHIN BLOCK GROUP .................................            3
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................            8
+     POSITIONING ANGLE (DEG) ............................      26.5020
+     INCLINATION ANGLE (DEG) ............................      28.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           15
+     WITHIN BLOCK GROUP .................................            3
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................            3
+     POSITIONING ANGLE (DEG) ............................      55.7610
+     INCLINATION ANGLE (DEG) ............................      59.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           16
+     WITHIN BLOCK GROUP .................................            3
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................            2
+     POSITIONING ANGLE (DEG) ............................      70.3840
+     INCLINATION ANGLE (DEG) ............................      70.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           17
+     WITHIN BLOCK GROUP .................................            4
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................           16
+     POSITIONING ANGLE (DEG) ............................       0.1500
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.4133
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           18
+     WITHIN BLOCK GROUP .................................            4
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................           18
+     POSITIONING ANGLE (DEG) ............................      30.1230
+     INCLINATION ANGLE (DEG) ............................      33.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.4133
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            0
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           19
+     WITHIN BLOCK GROUP .................................            1
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................            9
+     POSITIONING ANGLE (DEG) ............................       0.2290
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           20
+     WITHIN BLOCK GROUP .................................            1
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................            8
+     POSITIONING ANGLE (DEG) ............................      26.5021
+     INCLINATION ANGLE (DEG) ............................      28.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           21
+     WITHIN BLOCK GROUP .................................            1
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................            3
+     POSITIONING ANGLE (DEG) ............................      55.7611
+     INCLINATION ANGLE (DEG) ............................      59.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           22
+     WITHIN BLOCK GROUP .................................            1
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................            2
+     POSITIONING ANGLE (DEG) ............................      70.3836
+     INCLINATION ANGLE (DEG) ............................      70.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      29.9100
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           23
+     WITHIN BLOCK GROUP .................................            2
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................           16
+     POSITIONING ANGLE (DEG) ............................       0.1500
+     INCLINATION ANGLE (DEG) ............................       0.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.4133
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+
+     NUMBER OF BLOCK ....................................           24
+     WITHIN BLOCK GROUP .................................            2
+     CABLE IDENTICAL WITH CABLE IN BLOCK ................           13
+     NUMBER OF CONDUCTORS ...............................           18
+     POSITIONING ANGLE (DEG) ............................      30.1226
+     INCLINATION ANGLE (DEG) ............................      33.0000
+     CURRENT IN EACH CONDUCTOR OF THE BLOCK (A) .........  -12000.0000
+     INNER RADIUS OF THE BLOCK (MM)......................      45.4133
+     IMAGING AT X AXIS: 1 YES, 0 NO .....................            1
+     TURN ANGLE FOR BLOCK ...............................     180.0000
+   
+
+     TOTAL CU-VOLUME/LENGTH IN STRAIGHT SEC. (MM**2) ....    1811.4548
+     TOTAL SC-VOLUME/LENGTH IN STRAIGHT SEC. (MM**2) ....    1637.8434
+
+
+     ELECTROMAGNETIC FORCES (N/m) ON BLOCKS (2D) 
+     BLOCK      FORCE -X-      FORCE -Y-    BLOCK-CENT-X   BLOCK-CENT-Y  
+                 (N/m)           (N/m)         (mm)           (mm)   
+         1     0.6001E+06    -0.9280E+05     0.3623E+02     0.6799E+01
+         2     0.6405E+06    -0.1384E+06     0.2992E+02     0.2177E+02
+         3     0.2944E+06    -0.5722E+05     0.1877E+02     0.3233E+02
+         4     0.2077E+06    -0.3365E+05     0.1118E+02     0.3570E+02
+         5    -0.2645E+06    -0.3912E+06     0.5023E+02     0.1184E+02
+         6     0.5502E+06    -0.8930E+06     0.3610E+02     0.3642E+02
+         7     0.5912E+06     0.9829E+05     0.3649E+02    -0.6801E+01
+         8     0.6359E+06     0.1396E+06     0.3015E+02    -0.2189E+02
+         9     0.2930E+06     0.5752E+05     0.1891E+02    -0.3253E+02
+        10     0.2065E+06     0.3361E+05     0.1127E+02    -0.3594E+02
+        11    -0.2751E+06     0.3869E+06     0.5049E+02    -0.1184E+02
+        12     0.5438E+06     0.8905E+06     0.3633E+02    -0.3656E+02
+        13    -0.5953E+06     0.9505E+05    -0.3623E+02    -0.6799E+01
+        14    -0.6385E+06     0.1398E+06    -0.2992E+02    -0.2177E+02
+        15    -0.2939E+06     0.5779E+05    -0.1877E+02    -0.3233E+02
+        16    -0.2074E+06     0.3409E+05    -0.1118E+02    -0.3570E+02
+        17     0.2713E+06     0.3890E+06    -0.5023E+02    -0.1184E+02
+        18    -0.5472E+06     0.8947E+06    -0.3610E+02    -0.3642E+02
+        19    -0.5954E+06    -0.9534E+05    -0.3623E+02     0.6799E+01
+        20    -0.6389E+06    -0.1399E+06    -0.2992E+02     0.2177E+02
+        21    -0.2941E+06    -0.5773E+05    -0.1877E+02     0.3233E+02
+        22    -0.2076E+06    -0.3398E+05    -0.1118E+02     0.3570E+02
+        23     0.2711E+06    -0.3892E+06    -0.5023E+02     0.1184E+02
+        24    -0.5477E+06    -0.8945E+06    -0.3610E+02     0.3642E+02
+     SUMM:     0.5821E-09     0.1281E-08
+
+     ELECTROMAGNETIC FORCES (N/m) ON BLOCKS || AND |- TO CONDUCTORS (2D) 
+     BLOCK      FORCE ||       FORCE |-     BLOCK-CENT-X   BLOCK-CENT-Y  
+                 (N/m)          (N/m)          (mm)           (mm)   
+         1     0.5904E+06    -0.1309E+06     0.3623E+02     0.6799E+01
+         2     0.4732E+06    -0.4512E+06     0.2992E+02     0.2177E+02
+         3     0.9640E+05    -0.2839E+06     0.1877E+02     0.3233E+02
+         4     0.3644E+05    -0.2072E+06     0.1118E+02     0.3570E+02
+         5    -0.3210E+06    -0.3637E+06     0.5023E+02     0.1184E+02
+         6    -0.1825E+06    -0.1051E+07     0.3610E+02     0.3642E+02
+         7     0.5812E+06     0.1359E+06     0.3649E+02    -0.6801E+01
+         8     0.4686E+06     0.4499E+06     0.3015E+02    -0.2189E+02
+         9     0.9542E+05     0.2828E+06     0.1891E+02    -0.3253E+02
+        10     0.3610E+05     0.2061E+06     0.1127E+02    -0.3594E+02
+        11    -0.3313E+06     0.3585E+06     0.5049E+02    -0.1184E+02
+        12    -0.1858E+06     0.1045E+07     0.3633E+02    -0.3656E+02
+        13     0.5855E+06    -0.1328E+06    -0.3623E+02    -0.6799E+01
+        14     0.4708E+06    -0.4514E+06    -0.2992E+02    -0.2177E+02
+        15     0.9566E+05    -0.2838E+06    -0.1877E+02    -0.3233E+02
+        16     0.3592E+05    -0.2071E+06    -0.1118E+02    -0.3570E+02
+        17    -0.3276E+06    -0.3609E+06    -0.5023E+02    -0.1184E+02
+        18    -0.1859E+06    -0.1051E+07    -0.3610E+02    -0.3642E+02
+        19     0.5856E+06     0.1331E+06    -0.3623E+02     0.6799E+01
+        20     0.4710E+06     0.4517E+06    -0.2992E+02     0.2177E+02
+        21     0.9583E+05     0.2839E+06    -0.1877E+02     0.3233E+02
+        22     0.3610E+05     0.2072E+06    -0.1118E+02     0.3570E+02
+        23    -0.3274E+06     0.3611E+06    -0.5023E+02     0.1184E+02
+        24    -0.1853E+06     0.1051E+07    -0.3610E+02     0.3642E+02
+     SUMM:     0.2707E+07    -0.8481E+04
+
+
+     BLOCK NUMBER .......................................            1
+     PEAK FIELD IN CONDUCTOR    3 (T) ...................       9.4842
+     CURRENT IN CONDUCTOR   3 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR    1 (T) .................       1.8242
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            2
+     PEAK FIELD IN CONDUCTOR   16 (T) ...................       9.8829
+     CURRENT IN CONDUCTOR  16 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   10 (T) .................       3.3460
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            3
+     PEAK FIELD IN CONDUCTOR   20 (T) ...................       9.8523
+     CURRENT IN CONDUCTOR  20 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   18 (T) .................       7.0763
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            4
+     PEAK FIELD IN CONDUCTOR   22 (T) ...................       9.9930
+     CURRENT IN CONDUCTOR  22 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   21 (T) .................       7.6099
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            5
+     PEAK FIELD IN CONDUCTOR   35 (T) ...................       5.5404
+     CURRENT IN CONDUCTOR  35 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   23 (T) .................       0.0346
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            6
+     PEAK FIELD IN CONDUCTOR   56 (T) ...................       8.5614
+     CURRENT IN CONDUCTOR  56 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   39 (T) .................       2.4994
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            7
+     PEAK FIELD IN CONDUCTOR   60 (T) ...................       9.4137
+     CURRENT IN CONDUCTOR  60 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   57 (T) .................       1.7344
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            8
+     PEAK FIELD IN CONDUCTOR   72 (T) ...................       9.8448
+     CURRENT IN CONDUCTOR  72 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   66 (T) .................       3.3028
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................            9
+     PEAK FIELD IN CONDUCTOR   76 (T) ...................       9.8097
+     CURRENT IN CONDUCTOR  76 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   74 (T) .................       7.0479
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................           10
+     PEAK FIELD IN CONDUCTOR   78 (T) ...................       9.9501
+     CURRENT IN CONDUCTOR  78 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   77 (T) .................       7.5617
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................           11
+     PEAK FIELD IN CONDUCTOR   90 (T) ...................       5.5442
+     CURRENT IN CONDUCTOR  90 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   79 (T) .................       0.1580
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................           12
+     PEAK FIELD IN CONDUCTOR  112 (T) ...................       8.5222
+     CURRENT IN CONDUCTOR 112 (A) .......................   12000.0000
+     LOWEST FIELD IN CONDUCTOR   95 (T) .................       2.4571
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............    1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................    1484.3576
+
+
+     BLOCK NUMBER .......................................           13
+     PEAK FIELD IN CONDUCTOR  115 (T) ...................       9.4496
+     CURRENT IN CONDUCTOR 115 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  113 (T) .................       1.7710
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           14
+     PEAK FIELD IN CONDUCTOR  128 (T) ...................       9.8669
+     CURRENT IN CONDUCTOR 128 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  122 (T) .................       3.3292
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           15
+     PEAK FIELD IN CONDUCTOR  132 (T) ...................       9.8373
+     CURRENT IN CONDUCTOR 132 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  130 (T) .................       7.0679
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           16
+     PEAK FIELD IN CONDUCTOR  134 (T) ...................       9.9767
+     CURRENT IN CONDUCTOR 134 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  133 (T) .................       7.6069
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           17
+     PEAK FIELD IN CONDUCTOR  147 (T) ...................       5.5499
+     CURRENT IN CONDUCTOR 147 (A) .......................  -12000.0000
+ Version 1.29/04 of HIGZ started
+     LOWEST FIELD IN CONDUCTOR  135 (T) .................       0.1020
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           18
+     PEAK FIELD IN CONDUCTOR  168 (T) ...................       8.5578
+     CURRENT IN CONDUCTOR 168 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  151 (T) .................       2.4977
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           19
+     PEAK FIELD IN CONDUCTOR  171 (T) ...................       9.4504
+     CURRENT IN CONDUCTOR 171 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  169 (T) .................       1.7711
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           20
+     PEAK FIELD IN CONDUCTOR  184 (T) ...................       9.8728
+     CURRENT IN CONDUCTOR 184 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  178 (T) .................       3.3316
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           21
+     PEAK FIELD IN CONDUCTOR  188 (T) ...................       9.8468
+     CURRENT IN CONDUCTOR 188 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  186 (T) .................       7.0720
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           22
+     PEAK FIELD IN CONDUCTOR  190 (T) ...................       9.9899
+     CURRENT IN CONDUCTOR 190 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  189 (T) .................       7.6098
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           23
+     PEAK FIELD IN CONDUCTOR  203 (T) ...................       5.5495
+     CURRENT IN CONDUCTOR 203 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  191 (T) .................       0.1016
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+
+     BLOCK NUMBER .......................................           24
+     PEAK FIELD IN CONDUCTOR  224 (T) ...................       8.5599
+     CURRENT IN CONDUCTOR 224 (A) .......................  -12000.0000
+     LOWEST FIELD IN CONDUCTOR  207 (T) .................       2.4988
+     SUPERCONDUCTOR CURRENT DENSITY (A/MM2) .............   -1641.6995
+     COPPER CURRENT DENSITY (A/MM2) .....................   -1484.3576
+
+     SELF AND MUTUAL INDUCTANCES [mH/m] 
+
+                 1        2        3        4
+        1   0.2869   0.3511   0.1409   0.2005
+        2   0.3511   0.7983   0.2011   0.3600
+        3   0.1409   0.2011   0.2871   0.3516
+        4   0.2005   0.3600   0.3516   0.7990
+
+     TOTAL INDUCTANCE (mH/m) ............................       5.3817
+   
+ 
+     GRAPH:   1
+        N    ABSCISSA       ORDINATE
+        1 ,  0.000000000E+00 ,  0.959478566E+01
+        2 ,  0.606060606E-01 ,  0.959477401E+01
+        3 ,  0.121212121E+00 ,  0.959476237E+01
+        4 ,  0.181818182E+00 ,  0.959475075E+01
+        5 ,  0.242424242E+00 ,  0.959473914E+01
+        6 ,  0.303030303E+00 ,  0.959472754E+01
+        7 ,  0.363636364E+00 ,  0.959471596E+01
+        8 ,  0.424242424E+00 ,  0.959470439E+01
+        9 ,  0.484848485E+00 ,  0.959469283E+01
+       10 ,  0.545454545E+00 ,  0.959468129E+01
+       11 ,  0.606060606E+00 ,  0.959466976E+01
+       12 ,  0.666666667E+00 ,  0.959465824E+01
+       13 ,  0.727272727E+00 ,  0.959464674E+01
+       14 ,  0.787878788E+00 ,  0.959463525E+01
+       15 ,  0.848484848E+00 ,  0.959462377E+01
+       16 ,  0.909090909E+00 ,  0.959461231E+01
+       17 ,  0.969696970E+00 ,  0.959460087E+01
+       18 ,  0.103030303E+01 ,  0.959458944E+01
+       19 ,  0.109090909E+01 ,  0.959457802E+01
+       20 ,  0.115151515E+01 ,  0.959456662E+01
+       21 ,  0.121212121E+01 ,  0.959455523E+01
+       22 ,  0.127272727E+01 ,  0.959454386E+01
+       23 ,  0.133333333E+01 ,  0.959453251E+01
+       24 ,  0.139393939E+01 ,  0.959452117E+01
+       25 ,  0.145454545E+01 ,  0.959450984E+01
+       26 ,  0.151515152E+01 ,  0.959449854E+01
+       27 ,  0.157575758E+01 ,  0.959448724E+01
+       28 ,  0.163636364E+01 ,  0.959447597E+01
+       29 ,  0.169696970E+01 ,  0.959446471E+01
+       30 ,  0.175757576E+01 ,  0.959445346E+01
+       31 ,  0.181818182E+01 ,  0.959444224E+01
+       32 ,  0.187878788E+01 ,  0.959443103E+01
+       33 ,  0.193939394E+01 ,  0.959441983E+01
+       34 ,  0.200000000E+01 ,  0.959440866E+01
+       35 ,  0.206060606E+01 ,  0.959439750E+01
+       36 ,  0.212121212E+01 ,  0.959438636E+01
+       37 ,  0.218181818E+01 ,  0.959437523E+01
+       38 ,  0.224242424E+01 ,  0.959436413E+01
+       39 ,  0.230303030E+01 ,  0.959435304E+01
+       40 ,  0.236363636E+01 ,  0.959434197E+01
+       41 ,  0.242424242E+01 ,  0.959433092E+01
+       42 ,  0.248484848E+01 ,  0.959431989E+01
+       43 ,  0.254545455E+01 ,  0.959430888E+01
+       44 ,  0.260606061E+01 ,  0.959429788E+01
+       45 ,  0.266666667E+01 ,  0.959428691E+01
+       46 ,  0.272727273E+01 ,  0.959427595E+01
+       47 ,  0.278787879E+01 ,  0.959426502E+01
+       48 ,  0.284848485E+01 ,  0.959425410E+01
+       49 ,  0.290909091E+01 ,  0.959424321E+01
+       50 ,  0.296969697E+01 ,  0.959423233E+01
+       51 ,  0.303030303E+01 ,  0.959422148E+01
+       52 ,  0.309090909E+01 ,  0.959421064E+01
+       53 ,  0.315151515E+01 ,  0.959419983E+01
+       54 ,  0.321212121E+01 ,  0.959418903E+01
+       55 ,  0.327272727E+01 ,  0.959417826E+01
+       56 ,  0.333333333E+01 ,  0.959416751E+01
+       57 ,  0.339393939E+01 ,  0.959415679E+01
+       58 ,  0.345454545E+01 ,  0.959414608E+01
+       59 ,  0.351515152E+01 ,  0.959413540E+01
+       60 ,  0.357575758E+01 ,  0.959412474E+01
+       61 ,  0.363636364E+01 ,  0.959411410E+01
+       62 ,  0.369696970E+01 ,  0.959410348E+01
+       63 ,  0.375757576E+01 ,  0.959409289E+01
+       64 ,  0.381818182E+01 ,  0.959408232E+01
+       65 ,  0.387878788E+01 ,  0.959407177E+01
+       66 ,  0.393939394E+01 ,  0.959406125E+01
+       67 ,  0.400000000E+01 ,  0.959405076E+01
+       68 ,  0.406060606E+01 ,  0.959404028E+01
+       69 ,  0.412121212E+01 ,  0.959402983E+01
+       70 ,  0.418181818E+01 ,  0.959401941E+01
+       71 ,  0.424242424E+01 ,  0.959400901E+01
+       72 ,  0.430303030E+01 ,  0.959399864E+01
+       73 ,  0.436363636E+01 ,  0.959398829E+01
+       74 ,  0.442424242E+01 ,  0.959397797E+01
+       75 ,  0.448484848E+01 ,  0.959396767E+01
+       76 ,  0.454545455E+01 ,  0.959395740E+01
+       77 ,  0.460606061E+01 ,  0.959394716E+01
+       78 ,  0.466666667E+01 ,  0.959393694E+01
+       79 ,  0.472727273E+01 ,  0.959392675E+01
+       80 ,  0.478787879E+01 ,  0.959391659E+01
+       81 ,  0.484848485E+01 ,  0.959390646E+01
+       82 ,  0.490909091E+01 ,  0.959389635E+01
+       83 ,  0.496969697E+01 ,  0.959388627E+01
+       84 ,  0.503030303E+01 ,  0.959387622E+01
+       85 ,  0.509090909E+01 ,  0.959386620E+01
+       86 ,  0.515151515E+01 ,  0.959385621E+01
+       87 ,  0.521212121E+01 ,  0.959384625E+01
+       88 ,  0.527272727E+01 ,  0.959383631E+01
+       89 ,  0.533333333E+01 ,  0.959382641E+01
+       90 ,  0.539393939E+01 ,  0.959381654E+01
+       91 ,  0.545454545E+01 ,  0.959380670E+01
+       92 ,  0.551515152E+01 ,  0.959379688E+01
+       93 ,  0.557575758E+01 ,  0.959378710E+01
+       94 ,  0.563636364E+01 ,  0.959377735E+01
+       95 ,  0.569696970E+01 ,  0.959376764E+01
+       96 ,  0.575757576E+01 ,  0.959375795E+01
+       97 ,  0.581818182E+01 ,  0.959374830E+01
+       98 ,  0.587878788E+01 ,  0.959373868E+01
+       99 ,  0.593939394E+01 ,  0.959372909E+01
+      100 ,  0.600000000E+01 ,  0.959371953E+01
+
+     OBJECTIVE FUNCTION VALUE          :  0.0000000E+00
+     PENALTY TERM FOR VIOLATED BOUNDS  :  0.4940656-323
+     SUMM OF ALL TERMS                 :  0.4940656-323
+
+
+     DURATION ............................................     0: 0:49
+
+
+     ***************************************************************** 
+     *                 END OF THIS ROXIE CALCULATION                 * 
+     ***************************************************************** 
