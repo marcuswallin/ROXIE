@@ -11,7 +11,7 @@ QA_length = 0.249
 
 def main():
     file = '\\\\cern.ch\\dfs\\Users\\m\\mwallin\\' \
-        + 'Documents\\ROXIE\\Processed Data\FRESCA2\Horizontal.csv'
+        + 'Documents\\ROXIE\\Processed Data\\FRESCA2\\Horizontal_2coils.csv'
 
     
     m_properties1 = read_movement_data(file)
@@ -43,7 +43,7 @@ def main():
         Eleak += energy
         Ltot += magnet.get_L_self(i)
 
-
+    print('Eleak: ' + str(Eleak))
     #movement = list(numpy.linspace(-0.5,0.5, 100))
     
     #calculate(m_properties, movement)

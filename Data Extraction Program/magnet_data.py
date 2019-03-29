@@ -65,7 +65,7 @@ def write_magnet_file(magnetdata, file_name):
 
     with open(file_name, mode='w', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile, lineterminator="\n")
-        magnetdata[0].get_B_in_QA()
+       #magnetdata[0].get_B_in_QA()
         QA = magnetdata[0].QA_width()
         writer.writerow(['LinkNr','Movement', 'L', \
              f'Bm, QAwidth = {QA:.5f}m'])

@@ -9,21 +9,23 @@ from magnet_data import extract_magnetdata, write_magnet_file
 def main():
   
     folder = '\\\\cern.ch\\dfs\\Users\\m\\mwallin\\' \
-        + 'Documents\\ROXIE\\FRESCA raw ROXIE files\\Single Coil Horizontal'#\\Horizontal Movement'
+        + 'Documents\\ROXIE\\FRESCA raw ROXIE files\\Single Coil Vertical'#\\Horizontal Movement'
     file_names = get_txt_files_in_folder(folder)
+    print(file_names)
     #retrieves Total Inductance, Mutual Inductance matrix and B-field list
     magnetdata = extract_magnetdata(file_names, folder)
     
     
     
-    horizontal = magnetdata[0:5]
+    vertical = magnetdata[0:5]
   #  bottom_roll = magnetdata[5:10]
   #  horizontal = magnetdata[11:16]
    # mid_roll = magnetdata[21:26]
    # vertical = magnetdata[26:31]
    #test
-    write_magnet_file(horizontal, \
-        '\\\\cern.ch\\dfs\\Users\\m\\mwallin\\Documents\\ROXIE\\Processed Data\\FRESCA2\\Horizontal.csv')
+    print(len(vertical))
+    write_magnet_file(vertical, \
+        '\\\\cern.ch\\dfs\\Users\\m\\mwallin\\Documents\\ROXIE\\Processed Data\\FRESCA2\\Vertical.csv')
 
 '''
     for i1 in angular:

@@ -45,7 +45,11 @@ class Magnet:
     def get_new_I(self, magnet0 ):
         '''   '''
         Lzero = magnet0.Ltot()
-        Inew = math.sqrt(Lzero/self._Ltot)*self._I
+        deltaL = self._Ltot - Lzero
+        alpha = self._Ltot/deltaL
+        deltaI = -self._I/alpha
+        Inew = self._I + deltaI
+        #Inew = math.sqrt(Lzero/self._Ltot)*self._I
       
         return Inew
 
@@ -149,7 +153,7 @@ def get_energy_movement(coil, magnet_new, magnet0 ):
 
 
     #print(deltaL/magnet_new.get_L_self(coil))
-    return midI * (midI / 2 * deltaL + midL * deltaI)
+    return midI * (midI * deltaL + midL * deltaI)
 
 
 def trapezoidal_integration(x, y):
