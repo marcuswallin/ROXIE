@@ -6,37 +6,43 @@ class Magnet:
     '''Class that interprates the simulation data, and can calculate
     properties for analysis.'''
 
-    def __init__(self, magnet_properties, displacement, n_calculations, start_current):
+    def __init__(self, magnet_properties, displacement, full_movement, n_calculations, start_current, mag_length):
         self._properties = magnet_properties
         
         #changes for all magnets
-        self._magnet_length = 1.691
+        self._magnet_length = mag_length
         self._I = start_current
+
+        self._n_calculations = n_calculations
         #contains information on how much and where the displacement has occured
         #list of list containing x,y coordinates
-        #replace
-        self._n_calculations = n_calculations
+        self._full_movement = full_movement
         self._displacement = displacement
         self._x_values = numpy.linspace(0, self._magnet_length, n_calculations)
 
-        self._y_values = list(map(self.get_y, self._x_values))
-        
+        self._y_values = [self._full_movement for i in range(n_calculations)]#list(map(self.get_y, self._x_values))
+       
         #self._Ltot = self.calculate_inductance(n_calculations)
         self._M_values = self.calculate_M(magnet_properties)
+        for row in self._M_values:
+            print(row)
         self._Ltot = 0
         for i in range(self._properties.get_nr_coils()):
             self._Ltot += self.get_L_self(i)
+        #    print(self.get_L_self(i))
         
     
 
-    def calculate_inductance(self, n_calculations):
+    ''' def calculate_inductance(self, n_calculations):
         
         x_vals = self._x_values
         y_vals = self._y_values
+        #y_val = self._full_movement
         L_vals = list(map(self._properties.get_L, y_vals))
+        print(L_vals)
         Ltot = trapezoidal_integration(x_vals, L_vals)
         return Ltot
-
+    '''
 
     def Ltot(self):
         return self._Ltot
@@ -45,8 +51,13 @@ class Magnet:
     def get_new_I(self, magnet0 ):
         '''   '''
         Lzero = magnet0.Ltot()
+        
         deltaL = self._Ltot - Lzero
+        print('deltaL = '+str(self._Ltot ))
+        if deltaL == 0:
+            return self._I
         alpha = self._Ltot/deltaL
+      #  print(1/alpha)
         deltaI = -self._I/alpha
         Inew = self._I + deltaI
         #Inew = math.sqrt(Lzero/self._Ltot)*self._I
@@ -69,6 +80,8 @@ class Magnet:
             Mrow = []
             for coil2 in range(nr_coils):
                 M_local = [self._properties.get_M(y, coil1, coil2) for y in self._y_values]
+
+                #M_local = [self._properties.get_M(self._full_movement, coil1, coil2 for )]
                 Mrow.append(trapezoidal_integration(self._x_values, M_local))
             
             M.append(Mrow)
@@ -130,18 +143,12 @@ class Magnet:
       #  QAlength = QA_xend-QA_xstart
        
         x_vals = numpy.linspace(QA_xstart, QA_xend, self._n_calculations)
-        y_vals = list(map(self.get_y, x_vals))
-
+        #y_vals = list(map(self.get_y, x_vals))
+        y_vals = [self._full_movement for i in range(self._n_calculations)]
         Bm_vals = list(map(properties.get_Bm, y_vals))
         phi  = trapezoidal_integration(x_vals, Bm_vals)
 
         return phi*n_turns
-
-
-
-#def caluculate_spring_energy(magnet, movement_list, Fpermeter):
-
-
 
 #move to other module
 def get_energy_movement(coil, magnet_new, magnet0 ):
@@ -151,8 +158,6 @@ def get_energy_movement(coil, magnet_new, magnet0 ):
     deltaI = magnet_new.get_new_I(magnet0) - magnet0._I
     midI = (magnet_new.get_new_I(magnet0) + magnet0._I)/2
 
-
-    #print(deltaL/magnet_new.get_L_self(coil))
     return midI * (midI * deltaL + midL * deltaI)
 
 

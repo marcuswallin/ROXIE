@@ -9,7 +9,7 @@ from magnet_data import extract_magnetdata, write_magnet_file
 def main():
   
     folder = '\\\\cern.ch\\dfs\\Users\\m\\mwallin\\' \
-        + 'Documents\\ROXIE\\FRESCA raw ROXIE files\\Single Coil Vertical'#\\Horizontal Movement'
+        + 'Documents\\ROXIE\\FRESCA raw ROXIE files\\Single Coil Horizontal'
     file_names = get_txt_files_in_folder(folder)
     print(file_names)
     #retrieves Total Inductance, Mutual Inductance matrix and B-field list
@@ -25,7 +25,7 @@ def main():
    #test
     print(len(vertical))
     write_magnet_file(vertical, \
-        '\\\\cern.ch\\dfs\\Users\\m\\mwallin\\Documents\\ROXIE\\Processed Data\\FRESCA2\\Vertical.csv')
+        '\\\\cern.ch\\dfs\\Users\\m\\mwallin\\Documents\\ROXIE\\Processed Data\\FRESCA2\\Horizontal.csv')
 
 '''
     for i1 in angular:

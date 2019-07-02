@@ -6,8 +6,6 @@ class MutualInductance:
     def __init__(self, movement, inductances):
         self._nr_coils = len(inductances)
         self._M_values = inductances
-
-        #do not work properly now
         self._movement = movement
 
 

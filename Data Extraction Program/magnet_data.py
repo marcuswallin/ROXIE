@@ -46,12 +46,14 @@ class MagnetData:
         B = []
         
         for B_tuple in self._B_values:
+        #for index in range(42,61):
+            #B_tuple = self._B_values[index]
             x.append(B_tuple[0]*0.01)
             B.append(B_tuple[1])
         Bm = trapezoidal_integration(x,B)
         
         self._QA_width = x[-1]-x[0]
-        print('QA width: '+ str(self._QA_width))
+        print('QA width: '+ str(self._QA_width) + ' meters')
 
          #   xdif = self._B_values[i][0]-self._B_values[i-1][0]
         #    B = self._B_values[i][1]

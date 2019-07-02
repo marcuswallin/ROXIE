@@ -94,14 +94,7 @@ def read_movement_data(file):
             if len(M) == 4:
                 Mlist.append(MutualInductance(movement, M))
                 M = [] 
-            
 
-           # print(row[0] + "...")
-
-            #else if (len(row)>)
-
-    #for M in Mlist:      
-     #   print(M._M_values)
     return MagnetProperties(movement, inductance, Bm, Mlist)
 
         
